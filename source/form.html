@@ -36,82 +36,82 @@
       </nav>
     </header>
 
-    <main class="program-page-container">
+    <main class="main-container program-page">
       <h1 class="program-page__title">Подбор программы</h1>
       <p class="program-page__description">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
 
       <form class="user-form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="user__data">
+        <fieldset class="user-data">
           <legend class="visually-hidden">Введите данные вашего кота</legend>
-          <p class="user__field-group">
-            <label class="user__field-label" for="user__field--name">имя:*</label>
-            <input class="user__field--name" id="user__field--name" type="text" name="user-name" placeholder="барсик" required>
+          <p class="user-data__field-group">
+            <label class="user-data__field-label" for="user-data__field--name">имя:*</label>
+            <input class="user-data__field field user-data__field--name" id="user-data__field--name" type="text" name="user-name" placeholder="барсик" required>
           </p>
-          <p class="user__field-group">
-            <label class="user__field-label" for="user__field--weight">Вес (кг):*</label>
-            <input class="user__field--weight" id="user__field--weight" type="number" name="user-weight" placeholder="7" required>
+          <p class="user-data__field-group">
+            <label class="user-data__field-label" for="user-data__field--weight">Вес (кг):*</label>
+            <input class="user-data__field field user-data__field--weight" id="user-data__field--weight" type="number" name="user-weight" placeholder="7" required>
           </p>
-          <p class="user__field-group">
-            <label class="user__field-label" for="user__field--age">Возраст (лет):</label>
-            <input class="user__field--age" id="user__field--age" type="number" name="user-age" placeholder="7">
+          <p class="user-data__field-group">
+            <label class="user-data__field-label" for="user-data__field--age">Возраст (лет):</label>
+            <input class="user-data__field field user-data__field--age" id="user-data__field--age" type="number" name="user-age" placeholder="7">
           </p>
         </fieldset>
 
-        <fieldset class="user__diet-filter">
+        <fieldset class="diet-filter">
           <legend class="visually-hidden">Подбор питания</legend>
           <ul class="diet-filter__list">
             <li class="diet-filter__item">
               <label class="diet-filter__control" for="diet-filter__input--slim">похудение</label>
-              <input class="diet-filter__input--slim" id="diet-filter__input--slim" type="radio" name="diet" value="slim" checked>
+              <input class="diet-filter__input diet-filter__input--slim" id="diet-filter__input--slim" type="radio" name="diet" value="slim" checked>
             </li>
             <li class="diet-filter__item">
               <label class="diet-filter__control" for="diet-filter__input--pro">Набор массы</label>
-              <input class="diet-filter__input--pro" id="diet-filter__input--pro" type="radio" name="diet" value="pro">
+              <input class="diet-filter__input diet-filter__input--pro" id="diet-filter__input--pro" type="radio" name="diet" value="pro">
             </li>
             <li class="diet-filter__item">
               <label class="diet-filter__control" for="diet-filter__input--dont-know">Не знаю (Нужен ваш совет)</label>
-              <input class="diet-filter__input--dont-know" id="diet-filter__input--dont-know" type="radio" name="diet" value="dont-know">
+              <input class="diet-filter__input diet-filter__input--dont-know" id="diet-filter__input--dont-know" type="radio" name="diet" value="dont-know">
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="user__contacts">
-          <legend class="contacts__legend">Контактные данные (владельца кота)</legend>
-          <p class="contacts__field-group">
-            <label class="contacts__field-label" for="contacts__field--email">E-mail:*</label>
-            <input class="contacts__field--email" id="contacts__field--email" type="email" name="E-mail" placeholder="kuklachev@gmail.com" required>
+        <fieldset class="user-contacts">
+          <legend class="user-contacts__legend">Контактные данные (владельца кота)</legend>
+          <p class="user-contacts__field-group">
+            <label class="user-contacts__field-label" for="user-contacts__field--email">E-mail:*</label>
+            <input class="user-contacts__field field user-contacts__field--email" id="user-contacts__field--email" type="email" name="E-mail" placeholder="kuklachev@gmail.com" required>
           </p>
-          <p class="contacts__field-group">
-            <label class="contacts__field-label" for="contacts__field--phone">Телефон:*</label>
-            <input class="contacts__field--phone" id="contacts__field--phone" type="tel" name="Phone" placeholder="8 (960) 900-60-90" required>
+          <p class="user-contacts__field-group">
+            <label class="user-contacts__field-label" for="user-contacts__field--phone">Телефон:*</label>
+            <input class="user-contacts__field field user-contacts__field--phone" id="user-contacts__field--phone" type="tel" name="Phone" placeholder="8 (960) 900-60-90" required>
           </p>
         </fieldset>
 
-        <fieldset class="user__comment">
+        <fieldset class="comment">
           <legend class="comment__legend">Комментарий</legend>
           <textarea class="comment__text" name="comment" id="user__comment-text" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="user__additionally">
+        <fieldset class="additionally">
           <legend class="additionally__legend">Дополнительно</legend>
           <ul class="additionally__list">
             <li class="additionally__item">
               <label class="additionally__control" for="additionally__input--sugar">сахарозаменитель</label>
-              <input class="additionally__input--sugar" id="additionally__input--sugar" type="checkbox" name="sweetener" checked>
+              <input class="additionally__input additionally__input--sugar" id="additionally__input--sugar" type="checkbox" name="sweetener" checked>
             </li>
             <li class="additionally__item">
               <label class="additionally__control" for="additionally__input--water">питьевая вода</label>
-              <input class="additionally__input--water" id="additionally__input--water" type="checkbox" name="water">
+              <input class="additionally__input additionally__input--water" id="additionally__input--water" type="checkbox" name="water">
             </li>
             <li class="additionally__item">
               <label class="additionally__control" for="additionally__input--milk">молоко</label>
-              <input class="additionally__input--milk" id="additionally__input--milk" type="checkbox" name="milk">
+              <input class="additionally__input additionally__input--milk" id="additionally__input--milk" type="checkbox" name="milk">
             </li>
             <li class="additionally__item">
               <label class="additionally__control" for="additionally__input--vitamins">витамины</label>
-              <input class="additionally__input--vitamins" id="additionally__input--vitamins" type="checkbox" name="vitamins">
+              <input class="additionally__input additionally__input--vitamins" id="additionally__input--vitamins" type="checkbox" name="vitamins">
             </li>
           </ul>
         </fieldset>
@@ -123,21 +123,21 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <!-- контакты -->
-        <section class="main-footer__contacts">
+        <section class="main-footer__contacts contacts">
           <h2 class="visually-hidden">Адрес</h2>
           <div class="contacts__wrapper">
             <p class="contacts__text">
               приглашаем к сотрудничеству дилеров!
             </p>
-            <address class="contacts__address">
-              <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <address class="contacts__address address">
+              <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
             </address>
             <img class="contacts__map" src="img/map.jpg" width="768" height="400" alt="Карта">
           </div>
         </section>
 
         <div class="main-footer__logo">
-          <img class="logo__text" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи">
+          <img class="main-footer__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи">
         </div>
 
         <div class="main-footer__social social">
@@ -218,8 +218,10 @@
         </div>
 
         <div class="main-footer__copyright copyright">
-          <a class="copyright__link--text" href="https://htmlacademy.ru">HTML Academy</a>
-          <a class="copyright__link--logo" href="https://htmlacademy.ru"><img src="img/academy-logo.svg" width="27" height="34" alt="HTML академия"></a>
+          <a class="copyright__link" href="https://htmlacademy.ru">
+            HTML Academy
+            <img class="copyright__logo" src="img/academy-logo.svg" width="27" height="34" alt="HTML академия">
+          </a>
         </div>
       </div>
     </footer>

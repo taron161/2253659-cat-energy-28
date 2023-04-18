@@ -36,7 +36,7 @@
       </nav>
     </header>
 
-    <main class="catalog-container">
+    <main class="main-container catalog">
       <h1 class="catalog__title">Каталог продукции</h1>
       <div class="catalog__wrapper">
         <ul class="catalog__list">
@@ -153,13 +153,13 @@
             <button class="product-card__button button" type="button">заказать</button>
           </li>
         </ul>
-        <div class="catalog__pagination">
+        <div class="catalog__pagination pagination">
           <p class="pagination__text">Показать еще 100500 товаров</p>
           <p class="pagination__description">На самом деле вкусов гораздо больше!</p>
-          <button class="pagination__button button--pagination">показать все</button>
+          <button class="pagination__button button button--pagination">показать все</button>
         </div>
       </div>
-      <div class="catalog__additionally-products">
+      <div class="catalog__additionally-products additionally-products">
         <p class="additionally-products__title">Дополнительные товары</p>
         <ul class="additionally-products__list">
           <!-- товар 1 -->
@@ -211,21 +211,21 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <!-- контакты -->
-        <section class="main-footer__contacts">
+        <section class="main-footer__contacts contacts">
           <h2 class="visually-hidden">Адрес</h2>
           <div class="contacts__wrapper">
             <p class="contacts__text">
               приглашаем к сотрудничеству дилеров!
             </p>
-            <address class="contacts__address">
-              <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <address class="contacts__address address">
+              <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
             </address>
             <img class="contacts__map" src="img/map.jpg" width="768" height="400" alt="Карта">
           </div>
         </section>
 
         <div class="main-footer__logo">
-          <img class="logo__text" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи">
+          <img class="main-footer__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи">
         </div>
 
         <div class="main-footer__social social">
@@ -306,8 +306,10 @@
         </div>
 
         <div class="main-footer__copyright copyright">
-          <a class="copyright__link--text" href="https://htmlacademy.ru">HTML Academy</a>
-          <a class="copyright__link--logo" href="https://htmlacademy.ru"><img src="img/academy-logo.svg" width="27" height="34" alt="HTML академия"></a>
+          <a class="copyright__link" href="https://htmlacademy.ru">
+            HTML Academy
+            <img class="copyright__logo" src="img/academy-logo.svg" width="27" height="34" alt="HTML академия">
+          </a>
         </div>
       </div>
     </footer>

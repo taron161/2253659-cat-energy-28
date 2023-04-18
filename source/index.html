@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <!-- Хедер -->
@@ -108,25 +109,25 @@
       <section class="reviews">
         <div class="reviews__wrapper">
           <h2 class="reviews__title">Живой пример</h2>
-          <blockquote class="reviews__item">
+          <div class="reviews__item">
             <p class="reviews__text">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
               Отличный результат без изнуряющих тренировок!
               При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
-          </blockquote>
-          <div class="result__wrapper">
+          </div>
+          <div class="reviews__result result">
             <p class="result__weight">
-              <b class="weight__value">5 КГ</b>
-              <span>снижение веса</span>
+              <span class="result__value">5 КГ</span>
+              <span class="result__text">снижение веса</span>
             </p>
             <p class="result__days">
-              <b class="days__value">60 ДНЕЙ</b>
-              <span>затрачено времени</span>
+              <span class="result__value">60 ДНЕЙ</span>
+              <span class="result__text">затрачено времени</span>
             </p>
             <p class="result__price">Затраты на питание: 15 000 РУБ.</p>
           </div>
-          <div class="result__slider">
+          <div class="reviews__slider slider">
             <img class="slider__before" src="img/result-slide-before.png" width="280" height="256" alt="Кот до правильного питания">
             <img class="slider__after" src="img/result-slide-after.png" width="280" height="256" alt="Кот после правильного питания">
           </div>
@@ -137,21 +138,21 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <!-- контакты -->
-        <section class="main-footer__contacts">
+        <section class="main-footer__contacts contacts">
           <h2 class="visually-hidden">Адрес</h2>
           <div class="contacts__wrapper">
             <p class="contacts__text">
               приглашаем к сотрудничеству дилеров!
             </p>
-            <address class="contacts__address">
-              <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <address class="contacts__address address">
+              <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
             </address>
             <img class="contacts__map" src="img/map.jpg" width="768" height="400" alt="Карта">
           </div>
         </section>
 
         <div class="main-footer__logo">
-          <img class="logo__text" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи">
+          <img class="main-footer__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи">
         </div>
 
         <div class="main-footer__social social">
@@ -232,8 +233,10 @@
         </div>
 
         <div class="main-footer__copyright copyright">
-          <a class="copyright__link--text" href="https://htmlacademy.ru">HTML Academy</a>
-          <a class="copyright__link--logo" href="https://htmlacademy.ru"><img src="img/academy-logo.svg" width="27" height="34" alt="HTML академия"></a>
+          <a class="copyright__link" href="https://htmlacademy.ru">
+            <span class="copyright__text">HTML Academy</span>
+            <img class="copyright__logo" src="img/academy-logo.svg" width="27" height="34" alt="HTML академия">
+          </a>
         </div>
       </div>
     </footer>

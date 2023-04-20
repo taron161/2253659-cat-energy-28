@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Подобрать программу</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -17,17 +18,17 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list menu-list">
             <li class="menu-list__item">
-              <a href="index.html">
+              <a class="menu__link" href="index.html">
                 главная
               </a>
             </li>
             <li class="menu-list__item">
-              <a href="catalog.html">
+              <a class="menu__link" href="catalog.html">
                 каталог продукции
               </a>
             </li>
             <li class="menu-list__item menu-list__item--current">
-              <a>
+              <a class="menu__link">
                 подбор программы
               </a>
             </li>
@@ -43,7 +44,7 @@
       </p>
 
       <form class="user-form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="user-data">
+        <fieldset class="user-data fieldset">
           <legend class="visually-hidden">Введите данные вашего кота</legend>
           <p class="user-data__field-group">
             <label class="user-data__field-label" for="user-data__field--name">имя:*</label>
@@ -59,26 +60,26 @@
           </p>
         </fieldset>
 
-        <fieldset class="diet-filter">
+        <fieldset class="diet-filter fieldset">
           <legend class="visually-hidden">Подбор питания</legend>
           <ul class="diet-filter__list">
             <li class="diet-filter__item">
-              <label class="diet-filter__control" for="diet-filter__input--slim">похудение</label>
               <input class="diet-filter__input diet-filter__input--slim" id="diet-filter__input--slim" type="radio" name="diet" value="slim" checked>
+              <label class="diet-filter__control" for="diet-filter__input--slim">похудение</label>
             </li>
             <li class="diet-filter__item">
-              <label class="diet-filter__control" for="diet-filter__input--pro">Набор массы</label>
               <input class="diet-filter__input diet-filter__input--pro" id="diet-filter__input--pro" type="radio" name="diet" value="pro">
+              <label class="diet-filter__control" for="diet-filter__input--pro">Набор массы</label>
             </li>
             <li class="diet-filter__item">
-              <label class="diet-filter__control" for="diet-filter__input--dont-know">Не знаю (Нужен ваш совет)</label>
               <input class="diet-filter__input diet-filter__input--dont-know" id="diet-filter__input--dont-know" type="radio" name="diet" value="dont-know">
+              <label class="diet-filter__control" for="diet-filter__input--dont-know">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="user-contacts">
-          <legend class="user-contacts__legend">Контактные данные (владельца кота)</legend>
+        <fieldset class="user-contacts fieldset">
+          <legend class="user-contacts__legend form-legend">Контактные данные (владельца кота)</legend>
           <p class="user-contacts__field-group">
             <label class="user-contacts__field-label" for="user-contacts__field--email">E-mail:*</label>
             <input class="user-contacts__field field user-contacts__field--email" id="user-contacts__field--email" type="email" name="E-mail" placeholder="kuklachev@gmail.com" required>
@@ -89,29 +90,29 @@
           </p>
         </fieldset>
 
-        <fieldset class="comment">
-          <legend class="comment__legend">Комментарий</legend>
-          <textarea class="comment__text" name="comment" id="user__comment-text" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <fieldset class="comment fieldset">
+          <legend class="comment__legend form-legend">Комментарий</legend>
+          <textarea class="comment__text field" name="comment" id="user__comment-text" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="additionally">
-          <legend class="additionally__legend">Дополнительно</legend>
+        <fieldset class="additionally fieldset">
+          <legend class="additionally__legend form-legend">Дополнительно</legend>
           <ul class="additionally__list">
             <li class="additionally__item">
-              <label class="additionally__control" for="additionally__input--sugar">сахарозаменитель</label>
               <input class="additionally__input additionally__input--sugar" id="additionally__input--sugar" type="checkbox" name="sweetener" checked>
+              <label class="additionally__control" for="additionally__input--sugar">сахарозаменитель</label>
             </li>
             <li class="additionally__item">
-              <label class="additionally__control" for="additionally__input--water">питьевая вода</label>
               <input class="additionally__input additionally__input--water" id="additionally__input--water" type="checkbox" name="water">
+              <label class="additionally__control" for="additionally__input--water">питьевая вода</label>
             </li>
             <li class="additionally__item">
-              <label class="additionally__control" for="additionally__input--milk">молоко</label>
               <input class="additionally__input additionally__input--milk" id="additionally__input--milk" type="checkbox" name="milk">
+              <label class="additionally__control" for="additionally__input--milk">молоко</label>
             </li>
             <li class="additionally__item">
-              <label class="additionally__control" for="additionally__input--vitamins">витамины</label>
               <input class="additionally__input additionally__input--vitamins" id="additionally__input--vitamins" type="checkbox" name="vitamins">
+              <label class="additionally__control" for="additionally__input--vitamins">витамины</label>
             </li>
           </ul>
         </fieldset>
@@ -219,7 +220,7 @@
 
         <div class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru">
-            HTML Academy
+            <span class="copyright__text">HTML Academy</span>
             <img class="copyright__logo" src="img/academy-logo.svg" width="27" height="34" alt="HTML академия">
           </a>
         </div>

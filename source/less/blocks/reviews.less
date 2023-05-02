@@ -1,0 +1,28 @@
+// Блок "Живой пример"
+.reviews {
+  display: flex;
+  flex-direction: column;
+  background-color: #eaeaea;
+  padding: 25px 20px;
+  padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    margin: 0 110px;
+  }
+
+  &__title {
+    .set-text(oswald; 36px; 40px);
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    .set-text(lato; 14px; 18px);
+    color: @dark-grey;
+  }
+}

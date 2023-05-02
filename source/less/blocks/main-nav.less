@@ -1,0 +1,22 @@
+// Навигация в хедере
+.main-nav {
+  &__wrapper {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  &__toggle {
+    width: 24px;
+    height: 18px;
+    background-image: url("../../img/main-nav__toggle.svg");
+    background-color: @white;
+    border: none;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}

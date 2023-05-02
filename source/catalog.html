@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -17,17 +19,17 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list menu-list">
             <li class="menu-list__item">
-              <a href="index.html">
+              <a class="menu-list__link" href="index.html">
                 главная
               </a>
             </li>
             <li class="menu-list__item menu-list__item--current">
-              <a>
+              <a class="menu-list__link">
                 каталог продукции
               </a>
             </li>
             <li class="menu-list__item">
-              <a href="form.html">
+              <a class="menu-list__link" href="form.html">
                 подбор программы
               </a>
             </li>
@@ -167,7 +169,7 @@
             <p class="additionally-products__name">Сахарозаменитель</p>
             <dl class="additionally-products__description">
               <dt class="additionally-products__tara">1 упаковка (100 г)</dt>
-              <dd class="additionally-price">200 ₽</dd>
+              <dd class="additionally-products__price">200 ₽</dd>
             </dl>
             <button class="additionally-products__button button">заказать</button>
           </li>
@@ -176,7 +178,7 @@
             <p class="additionally-products__name">питьевая вода</p>
             <dl class="additionally-products__description">
               <dt class="additionally-products__tara">5 литров</dt>
-              <dd class="additionally-price">50 ₽</dd>
+              <dd class="additionally-products__price">50 ₽</dd>
             </dl>
             <button class="additionally-products__button button">заказать</button>
           </li>
@@ -185,7 +187,7 @@
             <p class="additionally-products__name">молоко</p>
             <dl class="additionally-products__description">
               <dt class="additionally-products__tara">1 литр</dt>
-              <dd class="additionally-price">100 ₽</dd>
+              <dd class="additionally-products__price">100 ₽</dd>
             </dl>
             <button class="additionally-products__button button">заказать</button>
           </li>
@@ -194,7 +196,7 @@
             <p class="additionally-products__name">витамины</p>
             <dl class="additionally-products__description">
               <dt class="additionally-products__tara">1 упаковка (30 г)</dt>
-              <dd class="additionally-price">300 ₽</dd>
+              <dd class="additionally-products__price">300 ₽</dd>
             </dl>
             <button class="additionally-products__button button">заказать</button>
           </li>
@@ -209,21 +211,21 @@
     </main>
 
     <footer class="main-footer">
-      <div class="main-footer__wrapper">
-        <!-- контакты -->
-        <section class="main-footer__contacts contacts">
-          <h2 class="visually-hidden">Адрес</h2>
-          <div class="contacts__wrapper">
-            <p class="contacts__text">
-              приглашаем к сотрудничеству дилеров!
-            </p>
-            <address class="contacts__address address">
-              <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-            </address>
-            <img class="contacts__map" src="img/map.jpg" width="768" height="400" alt="Карта">
-          </div>
-        </section>
+      <!-- контакты -->
+      <section class="main-footer__contacts contacts">
+        <h2 class="visually-hidden">Адрес</h2>
+        <div class="contacts__wrapper">
+          <p class="contacts__text">
+            приглашаем к сотрудничеству дилеров!
+          </p>
+          <address class="contacts__address address">
+            <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </address>
+        </div>
+        <img class="contacts__map map" src="img/map.jpg" width="768" height="400" alt="Карта">
+      </section>
 
+      <div class="main-footer__wrapper">
         <div class="main-footer__logo">
           <img class="main-footer__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи">
         </div>
@@ -307,7 +309,7 @@
 
         <div class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru">
-            HTML Academy
+            <span class="copyright__text">HTML Academy</span>
             <img class="copyright__logo" src="img/academy-logo.svg" width="27" height="34" alt="HTML академия">
           </a>
         </div>

@@ -1,9 +1,18 @@
 // основная кнопка сайта
 .button {
   .set-text(oswald; 14px; 18px);
+  display: block;
   background-color: @basic-green;
   color: @white;
+  text-transform: uppercase;
   text-decoration: none;
   padding: 7px;
   text-align: center;
+  border: none;
+
+  // Дополнительная кнопка
+  &--pagination {
+    background-color: #f2f2f2;
+    color: @dark-grey;
+  }
 }

@@ -1,9 +1,19 @@
 // копирайт в футере
-.copyright__text {
-  .set-text(lato; 16px; 19.2px);
-  color: @dark-grey;
-}
+.copyright {
+  &__text {
+    .set-text(lato; 16px; 19.2px);
+    color: @dark-grey;
+  }
 
-.copyright__link {
-  text-decoration: none;
+  &__link {
+    text-decoration: none;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: @tablet-width) {
+      width: 168px;
+    }
+  }
 }

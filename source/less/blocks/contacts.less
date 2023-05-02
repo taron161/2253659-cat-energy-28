@@ -1,12 +1,32 @@
 // Контакты в футере
-.contacts__text {
-  .set-text(oswald; 16px; 20px);
-  text-transform: uppercase;
-  color: #111111;
-}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.address__text {
-  .set-text(lato; 14px; 20px);
-  font-style: normal;
-  color: @dark-grey;
+  &__text {
+    .set-text(oswald; 16px; 20px);
+    text-transform: uppercase;
+    color: #111111;
+    width: 139px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    padding: 26px 20px;
+    box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      width: 768px;
+      padding: 56px 70px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 565px;
+      padding-left: 80px;
+      padding-right: 60px;
+    }
+  }
 }

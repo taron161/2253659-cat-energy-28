@@ -2,6 +2,7 @@
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .visually-hidden {
@@ -15,4 +16,17 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background-color: @white;
+  min-height: 100%;
 }

@@ -16,4 +16,22 @@
       width: 168px;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 1.5px 0;
+  }
+
+  &__link:hover {
+    & path {
+      fill: @basic-green;
+    }
+  }
+
+  &__link:active {
+    opacity: 0.3;
+
+    & path {
+      fill: @basic-green;
+    }
+  }
 }

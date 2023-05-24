@@ -1,21 +1,99 @@
 //Шапка страницы
 .main-header {
-  .set-text(oswald; 18px; 24px);
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  padding-bottom: 17px;
-  width: 320px;
+  .set-text(oswald; 20px; 20px);
+  position: relative;
+  font-weight: 500;
+  padding: 11px 20px;
+  padding-bottom: 0;
+  width: 100vw;
+  min-width: 320px;
   box-sizing: border-box;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
-    padding: 18px 30px;
+    .set-text(oswald; 18px; 24px);
+    font-weight: 400;
+    min-width: 768px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
-    padding: 70px 110px;
+    .set-text(oswald; 20px; 30px);
+    font-weight: 400;
+    min-width: 1440px;
+    padding: 53px 110px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 18px;
+
+    @media (max-width: (@tablet-width - 1)) {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100vw;
+        height: 1px;
+        background-color: #d9d9d9;
+        top: 66px;
+        left: 0;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__toggle {
+    width: 24px;
+    height: 18px;
+    background-color: @white;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    &--closed {
+      background-image: url("../../img/main-header__toggle--closed.svg");
+    }
+
+    &--opened {
+      background-image: url("../../img/main-header__toggle--opened.svg");
+      background-size: contain;
+      height: 22px;
+    }
+
+    &--nojs {
+      background-image: none;
+      cursor: auto;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &__link--text {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }

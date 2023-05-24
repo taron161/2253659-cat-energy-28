@@ -2,4 +2,36 @@
 .form-legend {
   .set-text(oswald; 24px; 26px);
   color: @black;
+  position: relative;
+  padding: 0 14px 0 20px;
+  background-color: @white;
+  margin-left: -20px;
+  max-width: 187px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    max-width: 515px;
+    margin-left: -40px;
+    padding: 0 40px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: @basic-green;
+    top: 60%;
+    left: 0;
+    z-index: -5;
+
+    @media (min-width: @tablet-width) {
+      left: -30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -70px;
+    }
+  }
 }

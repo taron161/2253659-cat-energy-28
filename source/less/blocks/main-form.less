@@ -1,0 +1,47 @@
+// Основной блок страницы подбора программы
+.main-form {
+  min-width: 320px;
+
+  &__title {
+    .set-text(oswald; 36px; 36px);
+    color: @black;
+    margin-top: 27px;
+    margin-bottom: 37px;
+    margin-left: 20px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-top: 56px;
+      margin-bottom: 54px;
+      margin-left: 69px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 75px;
+      margin-bottom: 56px;
+      margin-left: 110px;
+    }
+  }
+
+  &__description {
+    .set-text(oswald; 14px; 18px);
+    color: @black;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-bottom: 39px;
+    width: 226px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 66px;
+      margin-left: 70px;
+      width: 323px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 110px;
+    }
+  }
+}

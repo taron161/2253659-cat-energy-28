@@ -3,10 +3,25 @@
   margin: 49px 20px;
   margin-top: 0;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: (@desktop-width - 1)) {
+    position: relative;
     margin: 30px;
     margin-top: 45px;
-    margin-bottom: 90px;
+    margin-bottom: 43px;
+    max-width: 1200px;
+    padding-bottom: 104px;
+
+    // линия под блоком (для планшета)
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      left: -30px;
+      bottom: 0;
+      top: auto;
+      height: 1px;
+      background-color: #e6e6e6;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -15,31 +30,125 @@
     margin-bottom: 69px;
   }
 
-  &__title {
-    .set-text(oswald; 36px; 40px);
-    margin-bottom: 42px;
-  }
-
-  &__description {
-    .set-text(lato; 14px; 18px);
-    color: @dark-grey;
-  }
-
   &__list {
     .list-reset;
-    margin: auto;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
 
     @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
+      row-gap: 134px;
     }
 
     @media (min-width: @desktop-width) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 80px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 31px;
+    }
+  }
+
+  &__title {
+    .set-text(oswald; 36px; 40px);
+    margin-bottom: 40px;
+
+    @media (min-width: @tablet-width) {
+      .set-text(oswald; 60px; 60px);
+      margin-bottom: 72px;
+    }
+  }
+
+  &__description {
+    .set-text(lato; 14px; 18px);
+    color: @dark-grey;
+    max-width: 360px;
+
+    &--fast br {
+      @media (max-width: (@tablet-width - 1)) {
+        display: none;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      .set-text(lato; 16px; 24px);
+      width: 245px;
+    }
+  }
+
+  // иконки
+  &__icon {
+    min-width: 60px;
+    min-height: 60px;
+    background-color: @basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    // стили для цифр на заднем фоне
+    @media (min-width: @tablet-width) {
+      position: relative;
+
+      &::after {
+        .set-text(oswald; 280px; 280px);
+        position: absolute;
+        color: @bg-color;
+        left: 118px;
+        top: -40px;
+        z-index: -50;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      min-width: 80px;
+      min-height: 80px;
+    }
+
+    &--nutrition {
+      background-image: url("../../img/about-icons/nutrition.svg");
+    }
+
+    &--powder {
+      background-image: url("../../img/about-icons/powder.svg");
+    }
+
+    &--functional {
+      background-image: url("../../img/about-icons/functional.svg");
+    }
+
+    &--fast {
+      background-image: url("../../img/about-icons/fast.svg");
+    }
+
+    // цифры на заднем фоне
+    @media (min-width: @tablet-width) {
+      &--nutrition::after {
+        content: "1";
+      }
+
+      &--powder::after {
+        content: "2";
+      }
+
+      &--functional::after {
+        content: "3";
+      }
+
+      &--fast::after {
+        content: "4";
+      }
     }
   }
 }

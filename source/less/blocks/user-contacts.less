@@ -1,8 +1,58 @@
 // Контактные данные пользователя
 .user-contacts {
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 68px;
+    padding-right: 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
+
+  &__legend {
+    @media (max-width: (@tablet-width - 1)) {
+      &::after {
+        top: 30%;
+      }
+    }
+  }
+
+  &__field-group {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
   &__field-label {
-    .set-text(oswald; 16px; 18px);
-    text-transform: uppercase;
+    margin-right: 10px;
     color: @dark-grey;
+    min-width: max-content;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 20px;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 35px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 76px;
+      margin-bottom: 65px;
+      gap: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 570px 570px;
+      column-gap: 80px;
+      margin-bottom: 67px;
+    }
   }
 }

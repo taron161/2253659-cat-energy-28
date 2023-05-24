@@ -1,12 +1,39 @@
 // Блок "Дополнительно" страницы подбора программы
 .additionally {
-  &__control {
-    .set-text(oswald; 16px; 18px);
-    color: @black;
-    text-transform: uppercase;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
   }
 
   &__list {
     .list-reset;
+    margin: 34px 0;
+
+    @media (min-width: @tablet-width) {
+      margin: 57px 0 54px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 32px;
+      column-gap: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 61px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 117px;
+    }
+  }
+
+  &__item {
+    padding: 6px 0;
+
+    @media (min-width: @tablet-width) {
+      padding: 5px 0;
+    }
   }
 }

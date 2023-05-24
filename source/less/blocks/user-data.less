@@ -1,8 +1,30 @@
 // Пользовательские данные кота
 .user-data {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
+
+  &__field-group {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
   &__field-label {
-    .set-text(oswald; 16px; 18px);
-    text-transform: uppercase;
+    margin-right: 13px;
     color: @dark-grey;
+    min-width: max-content;
+  }
+
+  &__field {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
   }
 }

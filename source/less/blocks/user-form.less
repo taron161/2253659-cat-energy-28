@@ -1,6 +1,107 @@
 // Форма отправки данных
 .user-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
   &__notation {
     .set-text(lato; 14px; 16px);
+    margin-top: 21px;
+    align-self: center;
+
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+      margin-left: 64px;
+      margin-top: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 84px;
+    }
+  }
+
+  &__send-wrapper {
+    padding: 0 20px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      justify-content: start;
+      margin-bottom: 72px;
+      padding: 0 70px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 82px;
+      padding: 0 110px;
+    }
+  }
+
+  &__button {
+    @media (min-width: @tablet-width) {
+      width: 282px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 568px;
+    }
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+    margin-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+      padding-left: 70px;
+      padding-right: 66px;
+      margin-bottom: 75px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 110px;
+      margin-bottom: 69px;
+      display: grid;
+      grid-template-columns: 570px 570px;
+      column-gap: 80px;
+    }
+  }
+
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 68px;
+      padding-right: 66px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 110px;
+    }
+
+    &-text {
+      margin-top: 38px;
+      margin-bottom: 23px;
+      resize: none;
+      padding: 9px 14px;
+      height: 150px;
+
+      @media (min-width: @tablet-width) {
+        margin-top: 76px;
+        margin-bottom: 65px;
+        padding: 9px 18px;
+        height: 174px;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-bottom: 67px;
+      }
+    }
   }
 }

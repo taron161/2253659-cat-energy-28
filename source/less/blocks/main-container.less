@@ -1,13 +1,14 @@
 // Основной блок
 .main-container {
   flex-grow: 1;
-  width: 320px;
+  width: 100vw;
+  min-width: 320px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    min-width: 768px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
+    min-width: 1440px;
   }
 }

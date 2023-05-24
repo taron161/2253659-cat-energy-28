@@ -1,13 +1,89 @@
 // Показать еще товары
 .pagination {
+  padding-top: 53px;
+  position: relative;
+  box-sizing: border-box;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #d3d3d3;
+    left: calc(50% - 15px);
+    top: 14px;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      top: calc(52px + 30px);
+      left: calc(50% - 30px);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: #d3d3d3;
+    left: calc(50% - 1px);
+    top: 0;
+
+    @media (min-width: @tablet-width) {
+      height: 60px;
+      top: 52px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 38px;
+    padding-top: 0;
+    border: 2px solid @bg-color;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    padding-bottom: 41px;
+  }
+
   &__text {
     .set-text(oswald; 16px; 20px);
     color: #111111;
     text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      .set-text(oswald; 20px; 22px);
+      width: 134px;
+      margin: 0 auto;
+      margin-top: 161px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 160px;
+    }
   }
 
   &__description {
     .set-text(lato; 12px; 16px);
     color: @dark-grey;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 21px;
+
+    @media (min-width: @tablet-width) {
+      .set-text(oswald; 16px; 18px);
+      width: 165px;
+      margin: 0 auto;
+      margin-top: 23px;
+    }
+  }
+
+  &__button {
+    margin-top: auto;
   }
 }

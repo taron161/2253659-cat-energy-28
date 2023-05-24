@@ -1,0 +1,16 @@
+// название поля
+.label {
+  .set-text(oswald; 16px; 18px);
+  text-transform: uppercase;
+  max-width: 100px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 200px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

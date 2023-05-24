@@ -8,117 +8,136 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип 'Кэт энерджи'">
-      </a>
-      <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+      <div class="main-header__wrapper">
+        <a class="main-header__link" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="202" height="59">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="174" height="52">
+            <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип 'Кэт энерджи'">
+          </picture>
+        </a>
+        <a class="main-header__link main-header__link--text" href="index.html">
+          <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи">
+        </a>
+
+        <button class="main-header__toggle main-header__toggle--closed main-header__toggle--nojs" type="button">
+            <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="index.html">
-                главная
-              </a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="catalog.html">
-                каталог продукции
-              </a>
-            </li>
-            <li class="menu-list__item menu-list__item--current">
-              <a class="menu-list__link">
-                подбор программы
-              </a>
-            </li>
-          </ul>
-        </div>
+      </div>
+
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list menu">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">
+              главная
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">
+              каталог продукции
+            </a>
+          </li>
+          <li class="menu__item menu__item--current">
+            <a class="menu__link">
+              подбор программы
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main class="main-container main-form">
-      <h1 class="program-page__title">Подбор программы</h1>
-      <p class="program-page__description">
+      <h1 class="main-form__title">Подбор программы</h1>
+      <p class="main-form__description">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
 
       <form class="user-form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="user-data fieldset">
-          <legend class="visually-hidden">Введите данные вашего кота</legend>
-          <p class="user-data__field-group">
-            <label class="user-data__field-label" for="user-data__field--name">имя:*</label>
-            <input class="user-data__field field user-data__field--name" id="user-data__field--name" type="text" name="user-name" placeholder="барсик" required>
-          </p>
-          <p class="user-data__field-group">
-            <label class="user-data__field-label" for="user-data__field--weight">Вес (кг):*</label>
-            <input class="user-data__field field user-data__field--weight" id="user-data__field--weight" type="number" name="user-weight" placeholder="7" required>
-          </p>
-          <p class="user-data__field-group">
-            <label class="user-data__field-label" for="user-data__field--age">Возраст (лет):</label>
-            <input class="user-data__field field user-data__field--age" id="user-data__field--age" type="number" name="user-age" placeholder="7">
-          </p>
-        </fieldset>
+        <div class="user-form__wrapper">
+          <fieldset class="user-form__data user-data fieldset">
+            <legend class="visually-hidden">Введите данные вашего кота</legend>
+            <p class="user-data__field-group">
+              <label class="user-data__field-label label" for="user-data__field--name">имя:*</label>
+              <input class="user-data__field field user-data__field--name" id="user-data__field--name" type="text" name="user-name" placeholder="барсик" required>
+            </p>
+            <p class="user-data__field-group">
+              <label class="user-data__field-label label" for="user-data__field--weight">Вес (кг):*</label>
+              <input class="user-data__field field user-data__field--weight" id="user-data__field--weight" type="number" name="user-weight" placeholder="7" required>
+            </p>
+            <p class="user-data__field-group">
+              <label class="user-data__field-label label" for="user-data__field--age">Возраст (лет):</label>
+              <input class="user-data__field field user-data__field--age" id="user-data__field--age" type="number" name="user-age" placeholder="7">
+            </p>
+          </fieldset>
 
-        <fieldset class="diet-filter fieldset">
-          <legend class="visually-hidden">Подбор питания</legend>
-          <ul class="diet-filter__list">
-            <li class="diet-filter__item">
-              <input class="diet-filter__input diet-filter__input--slim" id="diet-filter__input--slim" type="radio" name="diet" value="slim" checked>
-              <label class="diet-filter__control" for="diet-filter__input--slim">похудение</label>
-            </li>
-            <li class="diet-filter__item">
-              <input class="diet-filter__input diet-filter__input--pro" id="diet-filter__input--pro" type="radio" name="diet" value="pro">
-              <label class="diet-filter__control" for="diet-filter__input--pro">Набор массы</label>
-            </li>
-            <li class="diet-filter__item">
-              <input class="diet-filter__input diet-filter__input--dont-know" id="diet-filter__input--dont-know" type="radio" name="diet" value="dont-know">
-              <label class="diet-filter__control" for="diet-filter__input--dont-know">Не знаю (Нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+          <fieldset class="user-form__diet diet-filter fieldset">
+            <legend class="visually-hidden">Подбор питания</legend>
+            <ul class="diet-filter__list">
+              <li class="diet-filter__item">
+                <input class="visually-hidden" id="diet-filter__input--slim" type="radio" name="diet" value="slim" checked>
+                <span class="control-mark"></span>
+                <label class="diet-filter__control label" for="diet-filter__input--slim">похудение</label>
+              </li>
+              <li class="diet-filter__item">
+                <input class="visually-hidden" id="diet-filter__input--pro" type="radio" name="diet" value="pro">
+                <span class="control-mark"></span>
+                <label class="diet-filter__control label" for="diet-filter__input--pro">Набор массы</label>
+              </li>
+              <li class="diet-filter__item">
+                <input class="visually-hidden" id="diet-filter__input--dont-know" type="radio" name="diet" value="dont-know">
+                <span class="control-mark"></span>
+                <label class="diet-filter__control label" for="diet-filter__input--dont-know">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
 
-        <fieldset class="user-contacts fieldset">
+
+        <fieldset class="user-form__contacts user-contacts fieldset">
           <legend class="user-contacts__legend form-legend">Контактные данные (владельца кота)</legend>
-          <p class="user-contacts__field-group">
-            <label class="user-contacts__field-label" for="user-contacts__field--email">E-mail:*</label>
-            <input class="user-contacts__field field user-contacts__field--email" id="user-contacts__field--email" type="email" name="E-mail" placeholder="kuklachev@gmail.com" required>
-          </p>
-          <p class="user-contacts__field-group">
-            <label class="user-contacts__field-label" for="user-contacts__field--phone">Телефон:*</label>
-            <input class="user-contacts__field field user-contacts__field--phone" id="user-contacts__field--phone" type="tel" name="Phone" placeholder="8 (960) 900-60-90" required>
-          </p>
+          <div class="user-contacts__wrapper">
+            <p class="user-contacts__field-group">
+              <label class="user-contacts__field-label label" for="user-contacts__field--email">E-mail:*</label>
+              <input class="user-contacts__field field user-contacts__field--email" id="user-contacts__field--email" type="email" name="E-mail" placeholder="kuklachev@gmail.com" required>
+            </p>
+            <p class="user-contacts__field-group">
+              <label class="user-contacts__field-label label" for="user-contacts__field--phone">Телефон:*</label>
+              <input class="user-contacts__field field user-contacts__field--phone" id="user-contacts__field--phone" type="tel" name="Phone" placeholder="8 (960) 900-60-90" required>
+            </p>
+          </div>
         </fieldset>
 
-        <fieldset class="comment fieldset">
-          <legend class="comment__legend form-legend">Комментарий</legend>
-          <textarea class="comment__text field" name="comment" id="user__comment-text" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <fieldset class="user-form__comment fieldset">
+          <legend class="user-form__comment-legend form-legend">Комментарий</legend>
+          <textarea class="user-form__comment-text field" name="comment" id="user__comment-text" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="additionally fieldset">
+        <fieldset class="user-form__additionally additionally fieldset">
           <legend class="additionally__legend form-legend">Дополнительно</legend>
           <ul class="additionally__list">
             <li class="additionally__item">
               <input class="additionally__input additionally__input--sugar" id="additionally__input--sugar" type="checkbox" name="sweetener" checked>
-              <label class="additionally__control" for="additionally__input--sugar">сахарозаменитель</label>
+              <label class="additionally__control  label" for="additionally__input--sugar">сахарозаменитель</label>
             </li>
             <li class="additionally__item">
               <input class="additionally__input additionally__input--water" id="additionally__input--water" type="checkbox" name="water">
-              <label class="additionally__control" for="additionally__input--water">питьевая вода</label>
+              <label class="additionally__control label" for="additionally__input--water">питьевая вода</label>
             </li>
             <li class="additionally__item">
               <input class="additionally__input additionally__input--milk" id="additionally__input--milk" type="checkbox" name="milk">
-              <label class="additionally__control" for="additionally__input--milk">молоко</label>
+              <label class="additionally__control label" for="additionally__input--milk">молоко</label>
             </li>
             <li class="additionally__item">
               <input class="additionally__input additionally__input--vitamins" id="additionally__input--vitamins" type="checkbox" name="vitamins">
-              <label class="additionally__control" for="additionally__input--vitamins">витамины</label>
+              <label class="additionally__control label" for="additionally__input--vitamins">витамины</label>
             </li>
           </ul>
         </fieldset>
-        <button class="user-form__button button" type="submit">отправить заявку</button>
-        <span class="user-form__notation">* — Обязательные поля</span>
+        <div class="user-form__send-wrapper">
+          <button class="user-form__button button" type="submit">отправить заявку</button>
+          <span class="user-form__notation">* — Обязательные поля</span>
+        </div>
+
       </form>
     </main>
 
@@ -128,26 +147,27 @@
         <h2 class="visually-hidden">Адрес</h2>
         <div class="contacts__wrapper">
           <p class="contacts__text">
-            приглашаем к сотрудничеству дилеров!
+            приглашаем <br> к сотрудничеству <br> дилеров!
           </p>
-          <address class="contacts__address address">
-            <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <address class="contacts__address">
+            <p class="contacts__address-text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </address>
         </div>
-        <img class="contacts__map map" src="img/map.jpg" width="768" height="400" alt="Карта">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198245!2d30.320472477418704!3d59.938719162093456!2m3!1f0!2f0!3f0!3m2!1i1024!
+        2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!
+        5e0!3m2!1sru!2sru!4v1683097821189!5m2!1sru!2sru"
+        width="768" height="400" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </section>
 
       <div class="main-footer__wrapper">
-        <div class="main-footer__logo">
-          <img class="main-footer__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи">
-        </div>
-
+        <a class="main-footer__link" href="#"><img class="main-footer__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Кэт энерджи"></a>
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Vk</span>
-                <svg width="28" height="22" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="social-icon" aria-hidden="true" focusable="false" width="28" height="22" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0.5 2.33876C0.5 1.48373 1.0151 1.02268 2.04531 0.955621L6.01515 0.980769C6.28158 0.980769 6.45921 1.10651 6.54802 1.35799C6.95655
                   2.61538 7.41392 3.70094 7.92014 4.61465C8.42637 5.52835 9.08801 6.58038 9.90507 7.77071C9.97611 7.9216 10.0916 7.99704 10.2514 7.99704C10.3758
                   7.99704 10.4735 7.93836 10.5445 7.82101L10.6244 7.54438L10.6511 3.19379C10.6511 2.89201 10.5756 2.69083 10.4246 2.59024C10.2736 2.48965 9.99388
@@ -183,7 +203,7 @@
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">YouTube</span>
-                <svg width="28" height="22" viewBox="0 0 29 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="social-icon" aria-hidden="true" focusable="false" width="28" height="22" viewBox="0 0 29 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.3509 10.7927L13.1145 7.30184C13.0159 7.23691 12.9016 7.19985 12.7837 7.19459C12.6657 7.18934 12.5486 7.21608 12.4446 7.27198C12.3406
                   7.32789 12.2537 7.41087 12.193 7.51215C12.1324 7.61343 12.1002 7.72924 12.1 7.84729V14.8291C12.1001 14.9481 12.1327 15.0648 12.1942 15.1667C12.2557
                   15.2686 12.3438 15.3518 12.4491 15.4073C12.5524 15.4631 12.6691 15.4895 12.7864 15.4837C12.9037 15.478 13.0172 15.4402 13.1145 15.3746L18.3509
@@ -206,7 +226,7 @@
             <li class="social__item">
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграм</span>
-                <svg width="28" height="22" viewBox="0 0 29 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="social-icon" aria-hidden="true" focusable="false" width="28" height="22" viewBox="0 0 29 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9608 3.15291C24.1393 3.30222 24.2255 3.5349 24.1872 3.76448L21.5611 19.5214C21.5244 19.7411 21.3789
                   19.9273 21.1745 20.0159C20.97 20.1045 20.7346 20.0833 20.5493 19.9597L12.6708 14.7074C12.5177 14.6054 12.4145 14.4437 12.3862 14.2619C12.358 14.08 12.4074
                   13.8947 12.5223 13.751L15.133 10.4877L10.773 13.3944C10.577 13.525 10.326 13.5407 10.1152 13.4353L4.86293 10.8092C4.62769 10.6915 4.48535 10.4449 4.5012
@@ -220,13 +240,28 @@
         </div>
 
         <div class="main-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">HTML Academy</span>
-            <img class="copyright__logo" src="img/academy-logo.svg" width="27" height="34" alt="HTML академия">
+            <svg class="copyright__logo" aria-hidden="true" focusable="false" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_88436_287)">
+                <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561
+                 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351
+                 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666
+                 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591
+                 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344
+                 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_88436_287">
+              <rect width="27" height="34" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>
           </a>
         </div>
       </div>
     </footer>
 
+    <script src="./js/script.js"></script>
   </body>
 </html>

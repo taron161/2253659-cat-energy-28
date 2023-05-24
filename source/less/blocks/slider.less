@@ -1,0 +1,86 @@
+// слайдер "до и после"
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 280px;
+  max-width: 560px;
+  height: 80vw;
+  min-height: 256px;
+  max-height: 512px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+
+  &__before {
+    width: 50%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  &__after {
+    width: 50%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: right;
+  }
+
+  &__range-button {
+    position: absolute;
+    display: block;
+    border: none;
+    width: 100%;
+    left: 0;
+    appearance: none;
+    background: transparent;
+
+    &::-webkit-slider-thumb {
+      cursor: pointer;
+      appearance: none;
+      width: 0;
+      height: 80vw;
+      min-height: 256px;
+      max-height: 512px;
+      background: transparent;
+    }
+  }
+
+  &__curtain {
+    position: absolute;
+    left: calc(50% - 20px);
+    height: 100%;
+  }
+  // наведение
+  &__curtain:hover {
+    cursor: pointer;
+
+    & .slider__fill {
+      fill: @basic-green;
+    }
+
+    & .slider__stroke {
+      stroke: @basic-green;
+    }
+  }
+  // нажатие
+  &__curtain:active {
+    & .slider__fill {
+      fill: @basic-green;
+    }
+
+    & .slider__stroke {
+      stroke: @basic-green;
+    }
+    opacity: 0.6;
+  }
+}
+

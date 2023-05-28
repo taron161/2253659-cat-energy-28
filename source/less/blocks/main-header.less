@@ -23,8 +23,8 @@
   @media (min-width: @desktop-width) {
     .set-text(oswald; 20px; 30px);
     font-weight: 400;
-    min-width: 1440px;
-    padding: 53px 110px 0;
+    width: 1220px;
+    margin: 53px auto 0;
   }
 
   &__wrapper {
@@ -54,6 +54,7 @@
   &__toggle {
     width: 24px;
     height: 18px;
+    margin-top: 4px;
     background-color: @white;
     border: none;
     background-repeat: no-repeat;
@@ -89,9 +90,18 @@
     &:active {
       opacity: 0.6;
     }
+
+    @media (min-width: @tablet-width) and (max-width: (@desktop-width - 1)) {
+      margin-top: -6px;
+    }
   }
 
   &__link--text {
+    @media (max-width: (@tablet-width - 1)) {
+      margin-top: 5px;
+      margin-right: 5px;
+    }
+
     @media (min-width: @tablet-width) {
       display: none;
     }

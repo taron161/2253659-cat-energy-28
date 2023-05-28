@@ -16,12 +16,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 110px;
-    padding-right: 110px;
+    width: 1220px;
+    margin: 111px auto 82px;
+    padding: 0;
     padding-bottom: 185px;
-    margin-bottom: 82px;
-    margin-top: 111px;
-    padding-top: 0;
   }
 
   &::before {
@@ -31,7 +29,7 @@
     height: 94vw;
     top: 0;
     left: 0;
-    background-color: @basic-green;
+    background-color: #5fa834;
     background-image: url("../../img/promo/promo-bg-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,12 +51,14 @@
 
     @media (min-width: @desktop-width) {
       display: block;
-      background-color: @basic-green;
+      background-color: #5fa834;
       background-image: url("../../img/promo/promo-bg-desktop@1x.jpg");
-      width: 720px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 50vw;
       height: 694px;
-      right: 0;
-      left: auto;
+      background-position: right;
+      left: 50%;
       top: -223px;
 
       @media (min-resolution: 2dppx) {
@@ -89,7 +89,11 @@
       max-width: 500px;
       font-size: 60px;
       line-height: 60px;
-      margin-left: 90px;
+      margin-left: 88px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 80px;
     }
   }
 
@@ -99,6 +103,7 @@
     margin-top: 25px;
     margin-bottom: 29px;
     text-align: center;
+    text-transform: uppercase;
 
     @media (min-width: @tablet-width) {
       align-self: normal;
@@ -112,12 +117,16 @@
     }
 
     @media (min-width: @desktop-width) {
+      margin-left: 80px;
       margin-top: 40px;
       margin-bottom: 52px;
     }
   }
 
   &__link-button {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 11px;
     align-self: normal;
     order: 2;
     margin-top: 3px;
@@ -130,6 +139,10 @@
       margin-top: 0;
       width: 244px;
       margin-left: 90px;
+
+      @media (min-width: @desktop-width) {
+        margin-left: 80px;
+      }
     }
   }
 
@@ -144,7 +157,7 @@
 
     @media (min-width: @desktop-width) {
       position: absolute;
-      right: 330px;
+      left: 448px;
       top: 2px;
       width: 552px;
       height: 499px;

@@ -8,7 +8,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px;
+    padding: 0;
+    width: 1220px;
+    margin: 0 auto;
   }
 
   &__legend {
@@ -20,6 +22,7 @@
   }
 
   &__field-group {
+    position: relative;
     display: flex;
     align-items: center;
     margin: 0;
@@ -54,5 +57,39 @@
       column-gap: 80px;
       margin-bottom: 67px;
     }
+  }
+
+  &__field {
+    @media (max-width: (@tablet-width - 1)) {
+      padding-left: 14px;
+      padding-right: 51px;
+
+      &:invalid:required {
+        padding-left: 13px;
+      }
+
+      &:focus {
+        padding-left: 13px;
+      }
+    }
+  }
+
+  &__field + svg {
+    position: absolute;
+    min-width: 20px;
+    min-height: 20px;
+    right: 14px;
+
+    @media (min-width: @tablet-width) {
+      right: 17px;
+    }
+  }
+
+  &__field:focus + svg path {
+    stroke: @basic-green;
+  }
+
+  &__field:invalid + svg path {
+    stroke: #ff8282;
   }
 }

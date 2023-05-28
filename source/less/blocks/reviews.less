@@ -10,7 +10,7 @@
     position: relative;
     margin: 0 30px;
     padding: 0;
-    padding-bottom: 101px;
+    padding-bottom: 98px;
     background-color: transparent;
 
     &::before {
@@ -24,7 +24,9 @@
       z-index: -10;
 
       @media (min-width: @desktop-width) {
-        left: -110px;
+        left: calc((1220px - 100vw) / 2);
+        height: 50vh;
+        top: 136px;
         background-color: @bg-color;
       }
     }
@@ -33,7 +35,8 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-    margin: 126px 110px 0;
+    width: 1220px;
+    margin: 126px auto 0;
     padding: 0;
     padding-bottom: 75px;
 

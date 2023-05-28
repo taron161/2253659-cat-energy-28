@@ -4,7 +4,7 @@
   padding-top: 23px;
   padding-bottom: 20px;
   margin-top: 24px;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
   box-sizing: border-box;
 
   @media (max-width: (@tablet-width - 1)) {
@@ -31,7 +31,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 72px;
-    margin-bottom: 75px;
+    margin-bottom: 0;
     padding: 24px 27px;
     border: 1px solid #e7e7e7;
     box-sizing: border-box;
@@ -43,36 +43,67 @@
   }
 
   &__control {
+    position: relative;
     color: #222222;
+    padding-left: 45px;
+    cursor: pointer;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 60px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 28px;
+      height: 28px;
+      border: 1px solid #cdcdcd;
+      border-radius: 50%;
+      top: -3px;
+      left: 0;
+
+      @media (min-width: @tablet-width) {
+        width: 38px;
+        height: 38px;
+        top: -5px;
+      }
+    }
   }
 
-  &__item:hover .control-mark {
-    cursor: pointer;
+  &__control:hover::after {
     border-color: #bababa;
   }
 
+  &__item input:focus {
+    & + .diet-filter__control::after {
+      border-color: @dark-grey;
+    }
+  }
+
   &__item input:disabled {
-    & + .control-mark {
+    & + .diet-filter__control {
       opacity: 0.3;
+      cursor: auto;
     }
   }
 
   &__item input:checked {
-    & + .control-mark::before {
+    & + .diet-filter__control::before {
       position: absolute;
       content: "";
       width: 13px;
       height: 13px;
       background-color: @basic-green;
-      top: calc(50% - 6.5px);
-      left: calc(50% - 6.5px);
+      top: 5.5px;
+      left: 9px;
       border-radius: 50%;
 
       @media (min-width: @tablet-width) {
         width: 18px;
         height: 18px;
-        top: calc(50% - 9px);
-        left: calc(50% - 9px);
+        top: 6px;
+        left: 11px;
       }
     }
   }
@@ -85,13 +116,10 @@
   }
 
   &__item {
-    position: relative;
-    padding: 5px 0;
-    padding-left: 45px;
+    padding: 3px 0;
 
     @media (min-width: @tablet-width) {
       padding: 5px 0;
-      padding-left: 60px;
     }
   }
 }

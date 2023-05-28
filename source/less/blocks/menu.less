@@ -26,6 +26,10 @@
       @media (min-width: @tablet-width) {
         border: none;
       }
+
+      @media (min-width: @tablet-width) and (max-width: (@desktop-width - 1)) {
+        margin-left: 3px;
+      }
     }
 
     @media (min-width: @tablet-width) {
@@ -39,7 +43,7 @@
           position: absolute;
           width: 100%;
           left: 0;
-          top: 52px;
+          top: 50px;
           height: 2px;
           background-color: @basic-green;
         }

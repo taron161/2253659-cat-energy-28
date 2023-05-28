@@ -36,12 +36,17 @@
 
     @media (min-width: @desktop-width) {
       margin-bottom: 82px;
-      padding: 0 110px;
+      padding: 0;
+      width: 1220px;
+      margin-left: calc((100vw - 1220px) / 2);
     }
   }
 
   &__button {
     @media (min-width: @tablet-width) {
+      letter-spacing: 2px;
+      line-height: 26px;
+      padding: 13px;
       width: 282px;
     }
 
@@ -62,8 +67,9 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 0 110px;
-      margin-bottom: 69px;
+      padding: 0;
+      width: 1220px;
+      margin: 0 auto 69px;
       display: grid;
       grid-template-columns: 570px 570px;
       column-gap: 80px;
@@ -82,7 +88,9 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 0 110px;
+      padding: 0;
+      width: 1220px;
+      margin: 0 auto;
     }
 
     &-text {

@@ -1,7 +1,6 @@
 // Поле ввода
 .field {
   .set-text(oswald; 16px; 18px);
-  text-transform: uppercase;
   color: @dark-grey;
   padding: 12.5px 19px;
   border: 1px solid #e7e7e7;
@@ -12,5 +11,36 @@
     font-size: 20px;
     line-height: 30px;
     padding: 10px 19px;
+  }
+
+  &::placeholder {
+    text-transform: uppercase;
+    color: @dark-grey;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid @dark-grey;
+    padding: 11.5 18px;
+
+    @media (min-width: @tablet-width) {
+      padding: 9px 18px;
+    }
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+
+  &:invalid:required {
+    border: 2px solid #ff8282;
+    padding: 11.5px 18px;
+
+    @media (min-width: @tablet-width) {
+      padding: 9px 18px;
+    }
   }
 }

@@ -1,5 +1,9 @@
 // Бдок сщциальных сетей
 .social {
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+  }
+
   &__list {
     .list-reset;
     width: 132px;
@@ -10,19 +14,15 @@
 
   &__item {
     font-size: 0;
+    line-height: 0;
   }
 
   &__link:hover {
-    & path {
-      fill: @basic-green;
-    }
+    stroke: @basic-green;
   }
 
   &__link:active {
     opacity: 0.3;
-
-    & path {
-      fill: @basic-green;
-    }
+    stroke: @basic-green;
   }
 }

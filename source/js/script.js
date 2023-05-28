@@ -27,20 +27,20 @@ function navToggle() {
 }
 
 // Яндекс карта
-let mapPinSrc = '../img/map-pin/map-pin-mobile@1x.png';
+let mapPinSrc = "./img/map-pin/map-pin-mobile@1x.png";
 let mapPinSize = [57, 53];
 let dpr = window.devicePixelRatio;
 
 if (document.documentElement.clientWidth >= 768) {
-  mapPinSrc = '../img/map-pin/map-pin-tablet@1x.png';
+  mapPinSrc = "./img/map-pin/map-pin-tablet@1x.png";
   mapPinSize = [113, 106];
   if (dpr >= 2) {
-    mapPinSrc = '../img/map-pin/map-pin-tablet@2x.png';
+    mapPinSrc = "./img/map-pin/map-pin-tablet@2x.png";
   }
 }
 else {
   if (dpr >= 2) {
-    mapPinSrc = '../img/map-pin/map-pin-mobile@2x.png';
+    mapPinSrc = "./img/map-pin/map-pin-mobile@2x.png";
   }
 }
   // Функция ymaps.ready() будет вызвана, когда

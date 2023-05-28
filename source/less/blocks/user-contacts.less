@@ -79,17 +79,18 @@
     min-width: 20px;
     min-height: 20px;
     right: 14px;
+    color: @black;
 
     @media (min-width: @tablet-width) {
       right: 17px;
     }
   }
 
-  &__field:focus + svg path {
-    stroke: @basic-green;
+  &__field:focus + svg {
+    color: @basic-green;
   }
 
-  &__field:invalid + svg path {
-    stroke: #ff8282;
+  &__field:invalid + svg {
+    color: #ff8282;
   }
 }

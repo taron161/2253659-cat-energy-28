@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: @dark-grey;
 
     @media (min-width: @tablet-width) {
       width: 168px;
@@ -22,16 +23,11 @@
   }
 
   &__link:hover {
-    & path {
-      fill: @basic-green;
-    }
+    color: @basic-green;
   }
 
   &__link:active {
     opacity: 0.3;
-
-    & path {
-      fill: @basic-green;
-    }
+    color: @basic-green;
   }
 }
